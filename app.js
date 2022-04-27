@@ -1,6 +1,17 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 let count = 0;
+let gitLink = $(".git-link");
+let gitLinkMobile = $(".git-link-mobile");
+let linkedinLink = $(".linked-in");
+let linkedinLinkMobile = $(".linked-in-mobile");
+let resumeWhite = $(".resume-icon-white");
+let resumeBlack = $(".resume-icon-black");
+let resumeDesc = $(".resume-desc");
+let resumeDescMobile = $(".resume-desc-mobile");
+let resume = $(".resume");
+let doc = $(".doc");
+let cover = $(".cover");
 let image = $(".image");
 let slider = $(".slider");
 let imageDesc = $(".image-desc");
@@ -174,3 +185,40 @@ function changeImg() {
   image.alt = sortedProjects[count].alt;
   imageDesc.innerHTML = sortedProjects[count].desc;
 }
+let clickCount = 0;
+doc.addEventListener("click", function () {
+  if (clickCount % 2 === 0) {
+    cover.style.transform = "translateX(0px)";
+    resumeWhite.style.display = "initial";
+    resumeBlack.style.display = "none";
+    resumeDesc.style.color = "rgba(255, 255, 255, 0.418)";
+    resumeDescMobile.style.color = "rgba(255, 255, 255, 0.418)";
+  } else {
+    cover.style.transform = "translateX(100%)";
+    resumeWhite.style.display = "none";
+    resumeBlack.style.display = "initial ";
+    resumeDesc.style.color = "rgba(0, 0, 0, 0.418)";
+    resumeDescMobile.style.color = "rgba(0, 0, 0, 0.418)";
+  }
+  clickCount++;
+});
+
+resume.addEventListener("click", function () {
+  window.open("./resume/Jack Stevens Web Development Resume 2022.pdf");
+});
+
+gitLink.addEventListener("click", function () {
+  window.open("https://www.github.com/jakalanern");
+});
+
+gitLinkMobile.addEventListener("click", function () {
+  window.open("https://www.github.com/jakalanern");
+});
+
+linkedinLink.addEventListener("click", function () {
+  window.open("https://www.linkedin.com/in/jack-stevens-889121b1/");
+});
+
+linkedinLinkMobile.addEventListener("click", function () {
+  window.open("https://www.linkedin.com/in/jack-stevens-889121b1/");
+});
