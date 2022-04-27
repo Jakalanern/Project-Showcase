@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --clr-black: rgba(0, 0, 0, 0.815);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgb(255, 255, 255);
+  color: black;
+  font-family: "Quicksand", sans-serif;
+  overflow: hidden;
+}
+
+h1 {
+  position: relative;
+  font-size: 3.5em;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.hover-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: -100px;
+  bottom: -150px;
+}
+
+.hover-me {
+  font-weight: 600;
+  font-size: 45%;
+  margin-bottom: 0.5em;
+}
+
+.hover-arrow {
+  width: 50px;
+  margin-left: 15px;
+}
+
+.jack {
+  font-size: 115%;
+  font-weight: 400;
+}
+
+.web-dev {
+  font-size: 125%;
+  font-weight: 1000;
+}
+
+.heres-work {
+  font-size: 90%;
+}
+
+.links {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  gap: 1em;
+}
+
+.link {
+  width: 50px;
+  cursor: pointer;
+}
+
+.git {
+  transition: 0.25s;
+}
+
+.git:hover {
+  transform: rotate(360deg);
+}
+
+.linked-in {
+  transition: 0.25s;
+}
+
+.linked-in:hover {
+  transform: rotate(360deg);
+}
+
+/* .scratch {
+  position: absolute;
+  font-size: 1rem;
+  white-space: nowrap;
+  right: 10px;
+  transform: translateY(-5px);
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.511);
+} */
+
+/* .me {
+  font-weight: 900;
+  color: black;
+} */
+
+/* SLIDER  */
+
+.slider-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  width: 600px;
+  height: 600px;
+  border-radius: 1em;
+  outline: 6px solid black;
+}
+
+.slider:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.932);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.25s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4em;
+}
+
+.overlay .image-desc {
+  font-size: 1.15em;
+  font-weight: 600;
+  line-height: 1.5em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: white;
+  margin-bottom: 3em;
+}
+
+.overlay .logos {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.overlay .logo {
+  position: relative;
+  width: 50px;
+}
+
+.logo-descriptions {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.logo-desc {
+  margin-top: 1em;
+  position: absolute;
+  font-size: 0.9em;
+  color: white;
+  line-height: 1.5em;
+  letter-spacing: 0.1em;
+}
+
+.github-logo-desc {
+  left: 13.25em;
+}
+
+.demo-logo-desc {
+  position: absolute;
+  right: 13.25em;
+}
+
+.overlay .demo-logo {
+  transition: 0.33s;
+  cursor: pointer;
+}
+
+.overlay .demo-logo:hover {
+  transform: scale(1.1) rotate(360deg);
+}
+
+.overlay .github-logo {
+  transition: 0.33s;
+  cursor: pointer;
+}
+
+.overlay .github-logo:hover {
+  transform: scale(1.1) rotate(-360deg);
+}
+
+.slider .image {
+  width: 100%;
+  height: 100%;
+}
+
+.slider-btn {
+  font-weight: 600;
+  margin: 0.8em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.arrow {
+  width: 60px;
+}
+
+.slider-btn:hover {
+  transform: scale(1.2);
+}
+
+/* SLIDER END */
+
+.mobile-links {
+  display: none;
+}
+
+@media (max-width: 950px) {
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 0em;
+  }
+  .slider-box {
+    transform: scale(0.85);
+  }
+  .links {
+    display: none;
+  }
+  .mobile-links {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: -6em;
+    gap: 1em;
+  }
+  .mobile-link {
+    width: 8%;
+    cursor: pointer;
+  }
+  .hover-container {
+    right: -130px;
+  }
+  .hover-me {
+    font-size: 50%;
+  }
+  .hover-arrow {
+    margin-left: 5px;
+  }
+}
+
+@media (max-width: 770px) {
+  .hover-container {
+    display: none;
+  }
+}
+
+@media (max-width: 670px) {
+  h1 {
+    font-size: 2em;
+    margin-bottom: -1em;
+  }
+  .slider-box {
+    transform: scale(0.75);
+  }
+}
+
+@media (max-width: 575px) {
+  h1 {
+    font-size: 1.75em;
+    margin-bottom: -3em;
+  }
+  .slider-box {
+    transform: scale(0.62);
+  }
+  .links {
+    bottom: 325px;
+  }
+  .link {
+    width: 35px;
+  }
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 1.5em;
+    margin-bottom: -5.25em;
+  }
+  .slider-box {
+    transform: scale(0.5);
+  }
+}
