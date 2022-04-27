@@ -126,7 +126,7 @@ h1 {
   width: 600px;
   height: 600px;
   border-radius: 1em;
-  outline: 6px solid black;
+  box-shadow: 0px 0px 0px 4px black;
 }
 
 .slider:hover .overlay {
